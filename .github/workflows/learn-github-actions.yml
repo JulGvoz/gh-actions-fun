@@ -11,4 +11,5 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - uses: JulGvoz/gh-actions-fun@main
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/hello-world-js-action
