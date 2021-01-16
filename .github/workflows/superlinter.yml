@@ -1,0 +1,25 @@
+name: Super-Linter
+
+# Run workflow when a new commit pushed to repo
+on: push
+
+jobs:
+  # Set job key. displayed as job name
+  # when job name unset
+  super-lint:
+    # name job
+    name: Lint code base
+    # set type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # checks out a copy of repo
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      # runs super-linter actions
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
