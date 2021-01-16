@@ -11,4 +11,4 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - uses: JulGvoz/gh-actions-fun
+      - uses: JulGvoz/gh-actions-fun@v1
