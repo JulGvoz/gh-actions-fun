@@ -8,3 +8,7 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: JulGvoz/gh-actions-fun
